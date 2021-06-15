@@ -1,24 +1,48 @@
 import logo from './logo.svg';
 import './App.css';
+import Container from '@material-ui/core/Container';
+import Create from "./components/Create";
+import Header from "./components/common/Header"
+import View from "./components/View";
+import {Grid,Paper} from '@material-ui/core';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container fixed>
+
+      <Header/>
+
+<Grid container spacing={3}>
+
+  
+  <Router>
+  <Switch>
+
+
+       <Route exact path="/"  component={Create}/>
+       <Route exact path="/create" component={View}/>
+         
+</Switch>
+
+
+  </Router>
+
+   
+
+
+     </Grid>
+      
+      </Container>
+
+    
   );
 }
 
