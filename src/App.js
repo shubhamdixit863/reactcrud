@@ -11,6 +11,7 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import Example from './components/Example';
 
 
 
@@ -29,6 +30,7 @@ function App() {
 
        <Route exact path="/"  component={Create}/>
        <Route exact path="/create" component={View}/>
+       <Route exact path="/example" component={Example}/>
          
 </Switch>
 
